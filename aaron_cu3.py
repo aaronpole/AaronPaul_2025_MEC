@@ -16,7 +16,7 @@ turtle.title("AaronPaul_2025_MEC")
 screen = turtle.Screen()
 screen.setup(SCREEN_SIZE + 50, SCREEN_SIZE + 50)
 screen.bgcolor(BG_COLOR)
-#screen.tracer(0, 0)  # turn off animation for speed; update at end
+#screen.tracer(0, 0)  
 
 t = turtle.Turtle()
 t.hideturtle()
@@ -252,16 +252,6 @@ def draw_pookalam():
         y = lamp_radius * math.sin(math.radians(angle))
         draw_nilavilakku(x - 30, y - 15, scale=20, color_lower=pick_color(6), color_flame=pick_color(4))
 
-    # rings
-    """for j in range(3):
-        r = 100 + j * 120
-        set_fill_color(pick_color(0 + j))
-        goto(0, -r)
-        t.pensize(2)
-        t.pendown()
-        t.circle(r)
-        t.penup()
-        t.pensize(1)"""
 
 
 def draw_spiral_dots():
@@ -279,23 +269,10 @@ def draw_spiral_dots():
         t.end_fill()
 
 
-"""def radial_gradient_strokes():
-    # thin stroked petals
-    layers = 24
-    for i in range(layers):
-        angle = i * (360.0 / layers)
-        t.setheading(angle)
-        set_fill_color(pick_color(2 + i))
-        goto(0, 0)
-        t.pendown()
-        t.forward(520)
-        t.penup()"""
-
 
 def build_pookalam_all():
     draw_pookalam()
     draw_spiral_dots()
-    #radial_gradient_strokes()
 
 # Run build
 build_pookalam_all()
